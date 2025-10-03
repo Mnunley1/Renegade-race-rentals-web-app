@@ -181,7 +181,7 @@ export const seedTestUsers = mutation({
         rating: 4.9,
         totalRentals: 45,
         memberSince: "January 2022",
-        profileImage: null,
+        profileImage: undefined,
         userType: "host" as const,
       },
       {
@@ -192,7 +192,7 @@ export const seedTestUsers = mutation({
         rating: 4.8,
         totalRentals: 32,
         memberSince: "March 2022",
-        profileImage: null,
+        profileImage: undefined,
         userType: "host" as const,
       },
       {
@@ -203,7 +203,7 @@ export const seedTestUsers = mutation({
         rating: 5.0,
         totalRentals: 28,
         memberSince: "June 2022",
-        profileImage: null,
+        profileImage: undefined,
         userType: "host" as const,
       },
     ];

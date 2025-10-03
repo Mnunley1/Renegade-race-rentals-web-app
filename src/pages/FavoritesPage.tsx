@@ -258,7 +258,7 @@ export default function FavoritesPage() {
                         </div>
 
                         <Button asChild size="sm">
-                          <Link href={`/vehicles/${vehicle._id}`}>
+                          <Link to={`/vehicles}/${vehicle._id}`}>
                             View Details
                           </Link>
                         </Button>

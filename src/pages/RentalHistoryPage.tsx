@@ -241,8 +241,8 @@ export default function RentalHistoryPage() {
                       </div>
                       <div>
                         <h3 className="text-lg font-semibold text-gray-900">
-                          {rental.vehicle.year} {rental.vehicle.make}{" "}
-                          {rental.vehicle.model}
+                          {rental.vehicle?.year} {rental.vehicle?.make}{" "}
+                          {rental.vehicle?.model}
                         </h3>
                         <p className="text-sm text-gray-600">
                           Rental #{rental._id}
@@ -284,14 +284,15 @@ export default function RentalHistoryPage() {
 
                   <div className="flex items-center justify-between">
                     <div className="text-sm text-gray-500">
-                      Booking Rate: {formatCurrency(rental.vehicle.dailyRate)}
+                      Booking Rate:{" "}
+                      {formatCurrency(rental.vehicle?.dailyRate || 0)}
                       /day
                     </div>
                     <div className="space-x-2">
                       <Button asChild variant="outline" size="sm">
                         <Link
-                          href={
-                            rental.vehicle._id
+                          to={
+                            rental.vehicle?._id
                               ? `/vehicles/${rental.vehicle._id}`
                               : "#"
                           }

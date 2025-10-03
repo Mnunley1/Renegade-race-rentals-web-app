@@ -170,7 +170,7 @@ export default function SignUpPage() {
                     <button
                       type="button"
                       onClick={() =>
-                        signUp.prepareEmailAddressVerification({
+                        signUp?.prepareEmailAddressVerification({
                           strategy: "email_code",
                         })
                       }

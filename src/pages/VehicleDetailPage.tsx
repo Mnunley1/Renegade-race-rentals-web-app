@@ -25,13 +25,16 @@ import {
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api } from "../../convex/_generated/api";
+import { Id } from "../../convex/_generated/dataModel";
 
 export default function VehicleDetailPage() {
   const { id: vehicleId } = useParams<{ id: string }>();
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   // Fetch vehicle data
-  const vehicleData = useQuery(api.vehicles.getById, { id: vehicleId! });
+  const vehicleData = useQuery(api.vehicles.getById, {
+    id: vehicleId as Id<"vehicles">,
+  });
 
   // Loading and error states
   if (vehicleData === undefined) {
